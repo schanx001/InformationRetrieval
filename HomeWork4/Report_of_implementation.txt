@@ -1,0 +1,49 @@
+Report of Implementation:
+
+Consists of 2 Major functions:
+Indexing hw3() -> Parsing&Tokenizing function and IndexerUnigrams function
+Query Matching main() -> Cosine score function and all the necessary helper functions.
+
+Following is the step by step procedure of the source code:
+
+1. Firstly, I have integrated the Homework3 parser/tokenizer and indexing module into the Homework4.
+
+2. I have used the inverted index for unigrams created using the Homework3 module (parsing, tokenzing and indexing)
+
+3. After reading the inverted index from its file, I have read the queries from a file containing the 4 given queries.
+
+4. Then the queries are processed one by one with each query being split into a list of terms in that query.
+
+5. The terms are then matched with the inverted index to get a list of documents within which the query terms appear. This is a mini inverted dictionary containing 
+	key as the terms in the query and value is a list of tuples of form [docid , FreqInDoc]
+
+6. After this, the Normalized Term Frequency is being calculated for each query term based on the retrieved inverted list. A dictionary is maintained. 
+	Normalized tf is calculated by : Term frequency in doc / Total Terms in that document 
+
+7. The Inverted Document Frequency is then calculated for the inverted list with terms in the query. A dictionary is maintained.
+	IDF = 1 + log(total documents / number of documents in which the term appears)
+	
+8. For each query term its normalized tf is multiplied with its idf based on the inverted list. A dictionary for this maintained with key as term in the query
+	and value as a list of documents which has that term,consisting of their tf*idf value.
+	tfidf = tf*idf  
+
+9. The term document vector is then obtained along with the query vector. So here documents which do not have the query terms are given 0 as value and
+	rest of the documents already have their tf*idf values for terms in the query. A dictionary is maintained for this with key as the terms in the query.
+ 
+10. The two vectors are then feeded into the cosine score calulator function along with (query id , inverted list,tokens count per document)
+
+11. In cosine similarity function I have calculated the dot product and stored it in a dictionary with doc id as the key. I have
+	called a document magnitude function to get the magnitude of documents matching the terms in the query. The magnitude calculated
+	is based on the addition of (tf*idf)^2 of all the terms in that document. After this the query magnitude is multiplied to the root of each
+	of the document's magnitude and stored in another dictionary. Now that we have our numerator and denominator ready we calculate the 
+	cosine similarity score for each document.
+	For cosine similarity score : cosine-similarity(q,d)   =   	V(query) · V(document)  
+																------------------------
+																|V(query)| |V(document)|
+															
+	Denominator is : (squareroot(square(query-vector))*squareroot(square(document-vector)))
+
+12. After calculating the scores for each document I have sorted the documents on the scores and have written them in a file into a format specified
+	in the homework4 document.
+
+13. Similarly other queries are processed.

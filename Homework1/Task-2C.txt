@@ -1,0 +1,38 @@
+Focused Crawling using the keyword "solar"
+DFS Focused Crawling:
+	-The crawler first takes a seed url which is 'https://en.wikipedia.org/wiki/Sustainable_energy' and then it retrieves a list of urls
+	of which it takes the first url and crawls it.
+	-Next it retrieves urls under the first child of the seed url and similarly it crawls deeper until a depth of 5 is reached
+	wherein the first depth is the seed url level which is 1.
+	-After reaching depth 5 it starts backtracking and crawls all the urls which were added to stack in similar manner as the first url mentioned above.
+	-Here important part is that it looks for links and anchor texts containing the keyword 'solar' in lower,upper and Camel case.
+
+	According to my observation DFS is faster than  BFS and the number of links crawled are also less than those crawled by BFS.
+	DFS might give links that are of low quality since it goes much deeper.
+	 
+	Number of links crawled: 723 
+	Time taken: 5-10 mins
+	
+	Top 5 links :
+	https://en.wikipedia.org/wiki/Sustainable_energy
+	https://en.wikipedia.org/wiki/Passive_solar_building_design
+	https://en.wikipedia.org/wiki/Solar_energy
+	https://en.wikipedia.org/wiki/Solar_Energy_(journal)
+	https://en.wikipedia.org/wiki/Solar_heating
+
+BFS Focused Crawling:
+	-The crawler crawls all the neighbours of the seedurl and then starts crawling the children of the neighbours and similarly it crawls urls at
+	a level once then goes to next level and so on.  
+	-BFS takes more time to crawl as compared to DFS
+	-Links crawled are more than those crawled by DFS.
+	-BFS might more relevent and better links than DFS.
+	
+	Number of links crawled: 1000 atmost with depth 3
+	Time taken: Approx 20-25 mins
+	
+	Top 5 links:
+	https://en.wikipedia.org/wiki/Sustainable_energy
+	https://en.wikipedia.org/wiki/Passive_solar_building_design
+	https://en.wikipedia.org/wiki/Solar_energy
+	https://en.wikipedia.org/wiki/Solar_heating
+	https://en.wikipedia.org/wiki/Solar_photovoltaics

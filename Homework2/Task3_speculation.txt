@@ -1,0 +1,49 @@
+For Graph G1:
+
+Top 5 pages by PageRank for G1:
+
+('Main_Page', 0.3016458405721546)
+('Integrated_Authority_File', 0.021996478907050584)
+('Digital_object_identifier', 0.01696089970750973)
+('International_Standard_Book_Number', 0.01597175966969293)
+('National_Diet_Library', 0.009687041791948568)
+
+Top 5 pages by inlinks :
+
+('Main_Page', 1000)
+('International_Standard_Book_Number', 480)
+('Digital_object_identifier', 453)
+('Renewable_energy', 415)
+('Efficient_energy_use', 285)
+
+For Graph G2:
+
+Top 5 pages by PageRank for G2:
+
+('WT21-B37-76', 0.0026794100575940004)
+('WT21-B37-75', 0.0015259169938491941)
+('WT25-B39-116', 0.0014694935259429026)
+('WT23-B21-53', 0.0013723220436261372)
+('WT24-B40-171', 0.0012450717566983654)
+
+Top 5 pages by inlinks :
+
+('WT21-B37-76', 2568)
+('WT18-B29-37', 2269)
+('WT01-B18-225', 2260)
+('WT23-B27-29', 1940)
+('WT21-B37-75', 1704)
+
+Speculation:
+
+1. 	According to my observation, links which have many inlinks are also having a high page rank value.
+2. 	And some pages have a high page rank value but are not in top 5 pages (by inlinks count) so in this 
+	case the pages themselves are propagating the pagerank values to their outlinks.
+3. 	In graph G2 doc id WT21-B37-76 is on top with high inlinks count so this page must be kind of a main
+	page like in Graph G1 which is present in most of the documents. 
+4. Both the graphs give similar results when we check the numbers (inlinks) and their corresponding page rank.
+5. Document WT24-B40-171 consists of a number of stories so its like an index which has many outlinks and then 
+	many pages might be pointing towards it.
+6. Links with high inlinks count doesn't mean they are of high quality considering the importance of information. 
+7. Graph G1 is a strongly connected graph which is why I think that page rank values are high as compared to
+	the links/documents in the WT2gcollection which is vast.  

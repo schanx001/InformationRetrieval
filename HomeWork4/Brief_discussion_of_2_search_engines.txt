@@ -1,0 +1,128 @@
+//Brief Discussion comparing the top 5 results between 2 search engines across all four queries.
+
+Query : global warming potential
+
+TASK2 Engine Results:
+
+QueryId    Q0 DocumentName                                                 Rank      Score                      SystemName
+
+1          Q0 GlobalWarming                                                1     0.1622275509630898             Shantanu-SYS-001
+1          Q0 JosephJ.Romm                                                 2     0.08725945710847391            Shantanu-SYS-001
+1          Q0 88888LightsOut                                               3     0.07897827849865943            Shantanu-SYS-001
+1          Q0 GreenhouseGasRemoval                                         4     0.07681057960004997            Shantanu-SYS-001
+1          Q0 RenewableEnergyInColombia                                    5     0.07362442907479076            Shantanu-SYS-001
+
+Lucene Engine Results:
+
+Query ID   Q0         Document Name                                                                    Rank       Cosine Similarity Score                  System Name         
+
+1          Q0         S:\Raw_files\GlobalWarming.txt                                                   1          0.33011916                               Shantanu-SYS-001    
+1          Q0         S:\Raw_files\EnvironmentalImpactOfTheEnergyIndustry.txt                          2          0.22874786                               Shantanu-SYS-001    
+1          Q0         S:\Raw_files\UnitedNationsFrameworkConventionOnClimateChange.txt                 3          0.20513095                               Shantanu-SYS-001    
+1          Q0         S:\Raw_files\SustainabilityAndEnvironmentalManagement.txt                        4          0.17809042                               Shantanu-SYS-001    
+1          Q0         S:\Raw_files\ClimateChange.txt                                                   5          0.17481668                               Shantanu-SYS-001    
+
+Observation:  
+	As we can see that GlobalWarming is common in both engines and the cosine score of documents also differ in both the search engines. And I observed that 
+	most of the documents in the results of Task2 appear in the results of LuceneEngine which suggests that they give similar results just that the order in which 
+	the results are obtained is different. Documents like [JosephJ.Romm , 88888LightsOut] do appear in the top 100 results of the Lucene Search Engine.
+	
+###################################################################################################################################################################################
+
+Query : green power renewable energy
+
+TASK2 Engine Results:
+
+QueryId    Q0 DocumentName                                                 Rank      Score                      SystemName
+	
+2          Q0 RenewableEnergyPayments                                      1     0.2374646698997544             Shantanu-SYS-001
+2          Q0 RenewableEnergyInMexico                                      2     0.221838818266851              Shantanu-SYS-001
+2          Q0 GreenPaper                                                   3     0.2025987234560549             Shantanu-SYS-001
+2          Q0 GreenPolitics                                                4     0.19754489633517752            Shantanu-SYS-001
+2          Q0 100%RenewableEnergy                                          5     0.19229161185661636            Shantanu-SYS-001
+
+Lucene Engine Results:
+
+Query ID   Q0         Document Name                                                                    Rank       Cosine Similarity Score                  System Name         
+
+2          Q0         S:\Raw_files\RenewableEnergyInTheCzechRepublic.txt                               1          0.49897                                  Shantanu-SYS-001    
+2          Q0         S:\Raw_files\3Degrees.txt                                                        2          0.4308013                                Shantanu-SYS-001    
+2          Q0         S:\Raw_files\RenewableEnergyInMexico.txt                                         3          0.37791765                               Shantanu-SYS-001    
+2          Q0         S:\Raw_files\RenewableEnergyCertificate(UnitedStates).txt                        4          0.3773466                                Shantanu-SYS-001    
+2          Q0         S:\Raw_files\RenewableEnergyInIndia.txt                                          5          0.3555289                                Shantanu-SYS-001    
+
+Observation:
+	RenewableEnergyInMexico is common in top 5 of both results.
+	Search results for both the engines are different in top 5 but in top 100 documents they do have common	documents. 
+	Most of the results are similar in both the engines.
+##############################################################################################################################################################################
+
+Query : solar energy california
+
+TASK2 Engine Results:
+
+QueryId    Q0 DocumentName                                                 Rank      Score                      SystemName
+
+3          Q0 RenewableEnergyInAsia                                        1     0.22606697729027614            Shantanu-SYS-001
+3          Q0 WaldpolenzSolarPark                                          2     0.20645360656425013            Shantanu-SYS-001
+3          Q0 SolarEnergy                                                  3     0.2028676341778438             Shantanu-SYS-001
+3          Q0 RenewableEnergyInTheUnitedStates                             4     0.16625566523621899            Shantanu-SYS-001
+3          Q0 EnergyPolicy                                                 5     0.16535326815238957            Shantanu-SYS-001
+
+Lucene Engine Results:
+
+Query ID   Q0         Document Name                                                                    Rank       Cosine Similarity Score                  System Name         
+
+3          Q0         S:\Raw_files\NevadaSolarOne.txt                                                  1          0.34785092                               Shantanu-SYS-001    
+3          Q0         S:\Raw_files\SolarDecathlon.txt                                                  2          0.30696633                               Shantanu-SYS-001    
+3          Q0         S:\Raw_files\SiliconValleyPower.txt                                              3          0.30553415                               Shantanu-SYS-001    
+3          Q0         S:\Raw_files\RenewableEnergyInTheUnitedStates.txt                                4          0.30387428                               Shantanu-SYS-001    
+3          Q0         S:\Raw_files\SolarEnergy.txt                                                     5          0.30246475                               Shantanu-SYS-001    
+
+Observation: 
+	Here we can see 2 results are common in both results of the search engines.
+	The scores again differ one of the reasons is that Lucene uses more parameters than just the tf idf to calculate the scores.		
+
+###############################################################################################################################################################################
+
+Query : light bulb bulbs alternative alternatives
+
+TASK2 Engine Results:
+
+QueryId    Q0 DocumentName                                                 Rank      Score                      SystemName
+
+4          Q0 Phase-OutOfIncandescentLightBulbs                            1     0.19149990715849788            Shantanu-SYS-001
+4          Q0 EnergySavingLamp                                             2     0.14287831857393535            Shantanu-SYS-001
+4          Q0 IncandescentLightBulb                                        3     0.1394224793904878             Shantanu-SYS-001
+4          Q0 LedLamp                                                      4     0.11787701982956744            Shantanu-SYS-001
+4          Q0 CompactFluorescentLamp                                       5     0.09494421159663911            Shantanu-SYS-001
+
+Lucene Engine Results:
+
+Query ID   Q0         Document Name                                                                    Rank       Cosine Similarity Score                  System Name         
+
+4          Q0         S:\Raw_files\Phase-OutOfIncandescentLightBulbs.txt                               1          0.62577057                               Shantanu-SYS-001    
+4          Q0         S:\Raw_files\IncandescentLightBulb.txt                                           2          0.3674998                                Shantanu-SYS-001    
+4          Q0         S:\Raw_files\LedLamp.txt                                                         3          0.22477867                               Shantanu-SYS-001    
+4          Q0         S:\Raw_files\EnergyConservation.txt                                              4          0.22295219                               Shantanu-SYS-001    
+4          Q0         S:\Raw_files\CompactFluorescentLamp.txt                                          5          0.20755807                               Shantanu-SYS-001    
+
+Observation: 	
+	Here we can see 4 results match in both results. Similarity scores are quite different as I said that lucene uses more parameters than just the tf idf weights to get 
+	high quality search results.
+
+-----------------------------------
+Final Conclusion:
+-----------------------------------
+- From what I read about Lucene search citing 	https://lucene.apache.org/core/3_6_0/scoring.html 
+												http://www.lucenetutorial.com/advanced-topics/scoring.html
+- 	Lucene uses boost to get high quality results 
+		Document level boosting 
+		Document's Field level boosting 
+		Query level boosting	
+- 	Lucene scoring uses a combination of the Vector Space Model (VSM) of Information Retrieval and the Boolean model to determine how relevant a given Document is to a User's query. In general, the idea behind the VSM is the more times a query term appears in a document relative to the number of times the term appears in all the documents in the collection, the more relevant that document is to the query. It uses the Boolean model to first narrow down the documents that need to be scored based on the use of boolean logic in the Query specification.	
+- 	From my observation the cosine scores for documents retrieved for the queries are some how dependent on the number of terms in the query in the Lucene Search Engine.
+For example, for query 4 which consists of 5 terms, the documents retrieved after calculating the cosine score have higher cosine score than as compared to the documents retrieved
+in other queries. It does have some effect on the scores depending on the terms in the query.
+- In Task2 we are only considering tf idf weights so I think that is the reason for the results to differ from the results given by Lucene Engine. The scores are also quite in the same range irrespective of the number of terms.  
+

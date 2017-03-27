@@ -1,0 +1,11 @@
+Brief Statistics for graph G1 and graph G2:
+
+Total links in graph G1 : 1000
+Number of links with no inlinks: 20 
+Proportion of links with no inlinks (sources): 20/1000
+Proportion of links with no outlinks (sink nodes): 0/1000
+
+Total links in graph G2 : 183811
+Number of links with no inlinks: 14350 
+Proportion of links with no inlinks (sources): 14350/183811
+Proportion of links with no outlinks (sink nodes): 66175/183811

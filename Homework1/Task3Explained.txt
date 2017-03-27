@@ -1,0 +1,8 @@
+Task3 explanation:
+
+	After crawling the 2 seed urls into 2 different files following steps can be carried out for merging with minimal loss of information:
+		1. First take 1st file and use readlines() to get the links into a final list
+		2. Now take 2nd file and get the links into the final list 
+		3. Compare if duplicates exist and remove them.
+		4. Get links from top of the files so that important and relevant links are obtained.
+		

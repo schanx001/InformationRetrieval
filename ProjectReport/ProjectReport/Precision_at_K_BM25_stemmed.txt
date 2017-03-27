@@ -1,0 +1,14 @@
+Precision @ K= 5 for query number : 1 is : 0.0
+Precision @ K= 20 for query number : 1 is : 0.0
+Precision @ K= 5 for query number : 2 is : 0.2
+Precision @ K= 20 for query number : 2 is : 0.05
+Precision @ K= 5 for query number : 3 is : 0.0
+Precision @ K= 20 for query number : 3 is : 0.0
+Precision @ K= 5 for query number : 4 is : 0.0
+Precision @ K= 20 for query number : 4 is : 0.05
+Precision @ K= 5 for query number : 5 is : 0.0
+Precision @ K= 20 for query number : 5 is : 0.0
+Precision @ K= 5 for query number : 6 is : 0.0
+Precision @ K= 20 for query number : 6 is : 0.0
+Precision @ K= 5 for query number : 7 is : 0.0
+Precision @ K= 20 for query number : 7 is : 0.2
